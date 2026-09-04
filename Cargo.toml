@@ -1,0 +1,27 @@
+[package]
+name = "openformula-kernel"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.96"
+authors = ["OpenFormula Kernel contributors"]
+license = "MIT"
+repository = "https://github.com/Nagitch/openformula-kernel"
+description = "Deterministic typed calculation kernel for an OpenFormula 1.4 function-semantics subset"
+readme = "README.md"
+keywords = ["openformula", "calculation", "spreadsheet", "wasm"]
+categories = ["mathematics", "no-std"]
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+libm = "0.2.15"
+
+[lints.rust]
+missing_docs = "warn"
+unsafe_code = "forbid"
+
+[lints.clippy]
+dbg_macro = "deny"
+todo = "deny"
